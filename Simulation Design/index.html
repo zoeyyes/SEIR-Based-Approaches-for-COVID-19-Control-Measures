@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+ 
+<head>
+<!-- Add a suitable title for this page -->
+<title>Simulation Design</title>
+</head>
+<body>
+<!-- What is the name of this folder? -->
+<h2>Simulation Design</h2>
+
+<h3>Mathematical Model: Dynamics</h3>
+
+<img src="policy.png" alt="policy" width="1200px">
+
+<h3>Our Models</h3>
+<p>Our models boast unique and powerful features that help tailor simulations to specific populations and scenarios.
+	<br></br>
+	One of the key attributes of our models is the ability to segregate symptoms into three distinct categories, namely asymptomatic, symptomatic, and severe. This differentiation enables more accurate modeling with distinguished parameters such as infectious and death rates.
+
+	Additionally, our models divide the population into two groups: high-risk and low-risk, allowing us to specify different key parameters such as the fraction of severe cases.
+
+	Another crucial feature of our models is the ability to model medical resource utilization, specifically the demand for intensive care unit (ICU) beds. The utilization of critical medical resources like ICU beds significantly affects the lethality rate. Modeling the need for ICU beds  enables healthcare providers to monitor the efficiency of resource allocation and ultimately save lives.
+	<br></br>
+	Model 1 is the benchmark model where no regulations are adopted, i.e. the infection rate is the same within the group of the same symptom. <br></br>
+	Model 2 simulates the scenario where uniform distancing is promoted to all groups. We added converters based on the ICU capacity. The infection rates would increase while the ICU capacity decreases. <br></br>
+	Model 3 explores measures that are specific to particular groups. For instance, we may require the low-risk group to wear masks but not restrict their mobility.
+	Model 3 represents the ideal regulations which not only improve the epidemic situation but also help maintain the normal operation of society.
+
+</p>
+
+	<h4>Model 1: Benchmark Model</h4>
+
+<p>The benchmark model refers to the scenario where no measures are taken to control the spread of the virus. </p>
+<img src="model1stat.png" alt="stat2" width="400px">
+<br>
+<img src="Model1.png" alt="model1" width="800px">
+
+<h4>Model 2: Uniform Social Measure Model</h4>
+<p>Model 2 considers the scenario where all groups are subjected to the same social distancing measures.</p>
+<img src="icu.png" alt="icu" width="200px">
+<img src="model2stat.png" alt="stat2" width="400px">
+<p>The extent to which is based on the ICU capacity by using a converter. The &#946; values will change after the ICU utilization hits the threshold.</p>
+
+
+<img src="Model2.png" alt="model2" width="800px">
+
+<h4>Model 3: Group-Specific Measure Model</h4>
+<p>Model 3 simulates and evaluates the case where the measures are group specific to protect vulnerable population while maintaining economic activities. (i.e., only require mask wearing but no lockdown)
+	<br>
+
+	<br>
+	Similarly, we can compare different policies with different &#946; values after implementation. We use 0.65 as the ICU capacity threshold.
+	<br>
+
+	<br>
+	For aggressive policy, we are suggesting (slightly) stricter measures for the high-risk group compared to USM.
+	</p>
+	<img src="model3stat.png" alt="stat2" width="400px">
+	<br>
+<img src="Model3.png" alt="model3" width="800px">
+
+</body>
+</html>

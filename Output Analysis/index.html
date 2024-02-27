@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+<!-- Add a suitable title for this page -->
+<title>Output Analysis</title>
+</head>
+<body>
+<!-- What is the name of this folder? -->
+<h2>Output Analysis</h2>
+
+<h3>Model 1: Benchmark Model (no measures carried out)</h3>
+
+<table><tr>
+	<td>
+		<figure>
+			<img src="model1.1.png" alt="1.1" width="400px">
+			<figcaption>Figure 1.1: High-risk Group</figcaption>
+		</figure>
+	</td>
+	<td>
+		<figure>
+			<img src="model1.2.png" alt="1.2" width="400px">
+			<figcaption>Figure 1.2: Low-risk Group</figcaption>
+		</figure>
+	</td>
+
+	<td>
+		<figure>
+			<img src="model1.3.png" alt="1.3" width="400px">
+			<figcaption>Figure 1.3: Infection Rate</figcaption>
+		</figure>
+	</td>
+
+	</tr>
+
+</table>
+<p>In the absence of human intervention，the virus will die out after around 300 days, infecting 80% of the population.</p>
+
+
+
+
+<figure>
+	<img src="model1.4.png" alt="1.4" width="600px">
+	<figcaption>Figure 1.4: Lethelity Rate Conditional on Severre Infenction</figcaption>
+</figure>
+<p>If no control measure are carried out, the ICU would be overwhelmed after only 30 days, and the overrun lasted until day ~240, leading to a total deaths number of around 615K. 
+</p>
+
+<h3>Model 2: Uniform Social Measure </h3>
+<p>In this scenario, the beta values(infection rates) change after the ICU utilization hits the threshold. To be specific, we defined 3 ICU capacity threshold values by classifying the policy into 3 categories, namely relaxed, moderate, and aggressive. Below are the results of the implementation of the aggressive policy.</p>
+<table><tr>
+	<td>
+		<figure>
+			<img src="model2.1.png" alt="2.1" width="400px">
+			<figcaption>Figure 2.1: High-risk Group</figcaption>
+		</figure>
+	</td>
+	<td>
+		<figure>
+			<img src="model2.2.png" alt="2.2" width="400px">
+			<figcaption>Figure 2.2: Low-risk Group</figcaption>
+		</figure>
+	</td>
+
+	<td>
+		<figure>
+			<img src="model2.3.png" alt="2.3" width="400px">
+			<figcaption>Figure 2.3: ICU Needs</figcaption>
+		</figure>
+	</td>
+	</tr>
+</table>
+
+<p>We compared the outcomes of different poliies as outlined as follows.</p>
+<figure>
+		<img src="model2.4.png" alt="1.4" width="600px">
+		<figcaption>Table 1: Comparison</figcaption>
+</figure>
+<p>According to our observation, uniform social distancing measures may not be the effective for reducing overall infection rates when the infection rate is higher than 60%. However, it has been proved effective in smoothing the increase in cases (longer stabilization time), which provides more oppurtunity for the regulators to respond. Moreover, uniform social distancing is highly effective in reducing the overall death rate and ICU load, as ICU capacity never being exceeded. Interestingly, there appears to be no significant difference between policies, as all have shown similar results in terms of reducing the burden on the healthcare system.</p>
+
+<h3>Model 3: Group-specific Measure </h3>
+<p>To simulate and evaluate the case where the measures are group specific to protect vulnerable population while maintaining economic activities (i.e. only require mask wearing but no lockdown), we build Model 3. Similarly, we compare different policies with different beta values after implementation. We will use 0.65 as the ICU capacity threshold. For aggressive policy, we are suggesting slightly stricter measures for the high-risk group compared to USM.
+</p>
+<figure>
+	<img src="model3.5.png" alt="model3.5" width="500px">
+	<figcaption>Table 2: Beta Values</figcaption>
+</figure>
+<p>Below the the simulation results under the relaxed policy.</p>
+<table><tr>
+	<td>
+		<figure>
+			<img src="model3.1.png" alt="3.1" width="400px">
+			<figcaption>Figure 2.1: High-risk Group</figcaption>
+		</figure>
+	</td>
+	<td>
+		<figure>
+			<img src="model3.2.png" alt="3.2" width="400px">
+			<figcaption>Figure 2.2: Low-risk Group</figcaption>
+		</figure>
+	</td>
+
+	<td>
+		<figure>
+			<img src="model3.3.png" alt="3.3" width="400px">
+			<figcaption>Figure 2.3: ICU Needs</figcaption>
+		</figure>
+	</td>
+	</tr>
+</table>
+
+<p>The table below illustrated the different outcomes of the implementation of different policies.</p>
+
+
+
+<figure>
+	<img src="model3.4.png" alt="3.4" width="500">
+	<figcaption>Table 3: comparison table</figcaption>
+</figure>
+<p>It has been found that group-specific measures may not require a significant sacrifice in terms of overall deaths, even under aggressive assumptions with 2.5 times the beta. Our findings suggest  the total death rate is roughly the same between group-specific measures and uniform social measures. Additionally, the ICU capacity was not exceeded for high-risk groups, highlighting the feasibility of group-specific measures in protecting vulnerable populations. Moreover, the actual ICU utilization for the low-risk group may be even better than anticipated given there would be available ICU beds left over for high-risk individuals. This underscores the potential benefits of group-specific measures in improving the epidemic situation and maintaining the economic functions of society.</p>
+
+
+</body>
+</html>
